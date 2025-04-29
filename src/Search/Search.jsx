@@ -12,7 +12,7 @@ import BookingModal from "../components/BookingModal/BookingModel";
 
 export default function Search() {
 
-    const [seachParams, setSearchParams] = useSearchParams();
+    const [seachParams] = useSearchParams();
     const [hospitals, setHospitals] = useState([]);
     const [state, setState] = useState(seachParams.get("state"));
     const [city, setCity] = useState(seachParams.get("city"));
