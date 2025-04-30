@@ -10,7 +10,10 @@ export default function MyBookings() {
     const [filteredBookings, setFilteredBookings] = useState([]);
 
     useEffect(() => {
-        const localBookings = localStorage.getItem("bookings") || "[]";
+        const localBookings = localStorage.getItem("bookings");
+        if(!localBookings){
+            return setBookings([]);
+        }
         setBookings(JSON.parse(localBookings));
     }, []);
 
