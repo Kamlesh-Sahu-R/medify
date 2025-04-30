@@ -10,17 +10,15 @@ export default function MyBookings() {
     const [filteredBookings, setFilteredBookings] = useState([]);
 
     useEffect(() => {
-        const localBookings = localStorage.getItem("bookings");
-        if(!localBookings){
-            return setBookings([]);
-        }
+        const localBookings = localStorage.getItem("bookings") || [];
+       
         try {
             const parsed = JSON.parse(localBookings);
             setBookings(parsed);
         } catch (error) {
             console.error("Error parsing bookings:", error);
             setBookings([]); 
-            
+
         }
     }, []);
 
