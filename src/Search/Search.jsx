@@ -8,7 +8,7 @@ import NavBar from "../components/NavBar/NavBar"
 import SearchHospital from "../components/SearchHospital/SearchHospital";
 import HospitalCard from "../components/HospitalCard/HospitalCard";
 import AutohideSnackbar from "../components/AutoHideSnackbar/AutoHideSnackbar";
-import BookingModal from "../components/BookingModal/BookingModel";
+import BookingModal from "../components/BookingModal/BookingModal";
 
 export default function Search() {
 
