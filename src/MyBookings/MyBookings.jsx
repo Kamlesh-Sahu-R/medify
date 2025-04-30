@@ -14,7 +14,14 @@ export default function MyBookings() {
         if(!localBookings){
             return setBookings([]);
         }
-        setBookings(JSON.parse(localBookings));
+        try {
+            const parsed = JSON.parse(localBookings);
+            setBookings(parsed);
+        } catch (error) {
+            console.error("Error parsing bookings:", error);
+            setBookings([]); 
+            
+        }
     }, []);
 
     useEffect(() => {
